@@ -23,19 +23,19 @@ void setup() {
   digitalWrite(relay, LOW);
   lcd.begin(16, 2);
   // Print a message to the LCD.
-  lcd.print("J Project.");
+  lcd.print("TARP Project.");
 }
 
 
 void loop() {
-int chk = DHT.read(DHT11PIN);
+DHT.read11(DHT11PIN);
 
 lcd.clear();
 lcd.setCursor(0, 0);
 lcd.print("H:T=");
-lcd.print((float)DHT.humidity, 2);
+lcd.print(DHT.humidity, 2);
 lcd.print(":");
-lcd.print((float)DHT.temperature, 2);
+lcd.print(DHT.temperature, 2);
 lcd.setCursor(0, 1);
 lcd.print("V=");
 lcd.print(value);

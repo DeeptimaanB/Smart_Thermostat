@@ -55,7 +55,7 @@ const char MAIN_page[] PROGMEM = R"=====(
 
 /* Put your SSID & Password */
 const char* ssid = "Banerjee's WIFI";  // Enter SSID here
-const char* password = "9687616872";  //Enter Password here
+const char* password = "12345678";  //Enter Password here
 
 
 ESP8266WebServer server(80);
@@ -185,8 +185,7 @@ void loop() {
     {
       Serial.print(value);
       irsend.sendRaw(t[more], 211, 38);
-      
-    }
-    
+     
+    }  
   }
 }
